@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f9;
+}
+.sidebar {
+    width: 220px;
+    background-color: #2c3e50;
+    height: 100vh;
+    position: fixed;
+    color: white;
+    padding: 20px;
+}
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 15px 0;
+}
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.main {
+    margin-left: 240px;
+    padding: 20px;
+}
+.message-card {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.message-content {
+    flex-grow: 1;
+}
+.avatar-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.profile {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
