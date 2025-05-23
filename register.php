@@ -8,7 +8,11 @@ if ($conn->connect_error) {
 $name = $course = $contact = $email = "";
 $password_required = true; // Only required on registration
 
+<<<<<<< Updated upstream
 // Detect action and id if provided
+=======
+// Detect action and id ided
+>>>>>>> Stashed changes
 $action = $_GET['action'] ?? '';
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 

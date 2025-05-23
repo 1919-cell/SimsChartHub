@@ -78,7 +78,7 @@ $result = $conn->query($query);
             <a href="profile.php?id=<?php echo $row['student_id']; ?>">
                 <img src="uploads/<?php echo htmlspecialchars($row['profile_pic'] ?: 'default.png'); ?>" alt="Profile Picture">
             </a>
-            <div class="message-content">
+            <div class="message-c
                 <h4><?php echo htmlspecialchars($row['name']); ?></h4>
                 <p><?php echo htmlspecialchars($row['content']); ?></p>
                 <small><?php echo $row['created_at']; ?></small>

@@ -52,6 +52,10 @@ $stmt->close();
                 <button type="submit">Upload</button>
             </form>
         <?php endif; ?>
+<<<<<<< Updated upstream
     </div>
+=======
+    
+>>>>>>> Stashed changes
 </body>
 </html>
