@@ -1,5 +1,12 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "simscharthub");
+
+$host = "sql109.hstn.me";
+$user = "mseet_39061377";
+$pass = "charthub19"; // Replace with your actual cPanel password
+$dbname = "mseet_39061377_simscharthub";
+
+
+$conn = new mysqli("$host", "$user", "$pass", "$dbname");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -8,7 +15,11 @@ if ($conn->connect_error) {
 $name = $course = $contact = $email = "";
 $password_required = true; // Only required on registration
 
+<<<<<<< Updated upstream
 // Detect action and id if provided
+=======
+
+>>>>>>> Stashed changes
 $action = $_GET['action'] ?? '';
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 

@@ -1,6 +1,10 @@
 <?php
 session_start();
-$conn = new mysqli("localhost", "root", "", "simscharthub");
+$host = "sql109.hstn.me";
+$user = "mseet_39061377";
+$pass = "charthub19"; // Replace with your actual cPanel password
+$dbname = "mseet_39061377_simscharthub";
+$conn = new mysqli("$host", "$user", "$pass", "$dbname");
 
 if (!isset($_SESSION['student_id'])) {
     header("Location: login.php");
@@ -52,6 +56,12 @@ $stmt->close();
                 <button type="submit">Upload</button>
             </form>
         <?php endif; ?>
+<<<<<<< Updated upstream
     </div>
 </body>
+=======
+
+    </div>
+
+>>>>>>> Stashed changes
 </html>
