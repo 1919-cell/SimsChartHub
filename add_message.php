@@ -4,22 +4,53 @@ if (!isset($_SESSION['student_id'])) {
     header("Location: login.php");
     exit();
 }
+
 $conn = new mysqli("localhost", "root", "", "simscharthub");
 
+// Check for connection error
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$error = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $student_id = $_SESSION['student_id'];
-    $content = $_POST['content'];
-    $stmt = $conn->prepare("INSERT INTO messages (student_id, content) VALUES (?, ?)");
-    $stmt->bind_param("is", $student_id, $content);
-    $stmt->execute();
-    header("Location: index.php");
+    $content = trim($_POST['content']);
+
+    if (!empty($content)) {
+        $stmt = $conn->prepare("INSERT INTO messages (student_id, content, created_at) VALUES (?, ?, NOW())");
+        $stmt->bind_param("is", $student_id, $content);
+        if ($stmt->execute()) {
+            header("Location: index.php");
+            exit();
+        } else {
+            $error = "Failed to post message.";
+        }
+        $stmt->close();
+    } else {
+        $error = "Message cannot be empty.";
+    }
 }
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Post Message</title>
+    <title>Post Message - SimsChartHub</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .main {
+            padding: 20px;
+            margin-left: 200px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <div class="sidebar">
@@ -32,9 +63,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 <div class="main">
     <h2>Post a Message</h2>
+    <?php if (!empty($error)): ?>
+        <p class="error"><?php echo htmlspecialchars($error); ?></p>
+    <?php endif; ?>
     <form method="POST">
         <label for="content">Message:</label><br>
-        <textarea name="content" rows="5" cols="40" required></textarea><br><br>
+        <textarea name="content" rows="5" required></textarea><br><br>
         <input type="submit" value="Post Message">
     </form>
 </div>
