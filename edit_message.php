@@ -1,6 +1,10 @@
 <?php
+include('db_connect.php');
 session_start();
+<<<<<<< Updated upstream
 $conn = new mysqli("localhost", "root", "", "simscharthub");
+=======
+>>>>>>> Stashed changes
 
 if (!isset($_SESSION['student_id'])) {
     header("Location: login.php");

@@ -1,17 +1,30 @@
 <?php
+<<<<<<< Updated upstream
 $conn = new mysqli("localhost", "root", "", "simscharthub");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+=======
+
+include('db_connect.php');
+>>>>>>> Stashed changes
 
 // Initialize variables for the form
 $name = $course = $contact = $email = "";
 $password_required = true; // Only required on registration
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // Detect action and id if provided
 =======
 // Detect action and id ided
+>>>>>>> Stashed changes
+=======
+
+// Detect action and id if provided
+
+
+
 >>>>>>> Stashed changes
 $action = $_GET['action'] ?? '';
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;

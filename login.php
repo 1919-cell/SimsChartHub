@@ -1,6 +1,10 @@
 <?php
+include('db_connect.php');
 session_start();
+<<<<<<< Updated upstream
 $conn = new mysqli("localhost", "root", "", "simscharthub");
+=======
+>>>>>>> Stashed changes
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];

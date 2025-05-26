@@ -1,10 +1,12 @@
 <?php
+include('db_connect.php');
 session_start();
 if (!isset($_SESSION['student_id'])) {
     header("Location: login.php");
     exit();
 }
 
+<<<<<<< Updated upstream
 $conn = new mysqli("localhost", "root", "", "simscharthub");
 
 // Check for connection error
@@ -13,6 +15,8 @@ if ($conn->connect_error) {
 }
 
 $error = "";
+=======
+>>>>>>> Stashed changes
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $student_id = $_SESSION['student_id'];
     $content = trim($_POST['content']);
