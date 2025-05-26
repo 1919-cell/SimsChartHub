@@ -7,6 +7,7 @@ if (!isset($_SESSION['student_id'])) {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 $conn = new mysqli("localhost", "root", "", "simscharthub");
 
 // Check for connection error
@@ -15,6 +16,8 @@ if ($conn->connect_error) {
 }
 
 $error = "";
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

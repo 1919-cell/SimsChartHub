@@ -2,7 +2,10 @@
 include('db_connect.php');
 session_start();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 $conn = new mysqli("localhost", "root", "", "simscharthub");
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 

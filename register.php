@@ -1,9 +1,14 @@
 <?php
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 $conn = new mysqli("localhost", "root", "", "simscharthub");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+=======
+
+include('db_connect.php');
+>>>>>>> Stashed changes
 =======
 
 include('db_connect.php');
@@ -15,6 +20,7 @@ $password_required = true; // Only required on registration
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // Detect action and id if provided
 =======
 // Detect action and id ided
@@ -24,8 +30,13 @@ $password_required = true; // Only required on registration
 // Detect action and id if provided
 
 
-
+=======
 >>>>>>> Stashed changes
+
+// Detect action and id if provided
+
+
+
 $action = $_GET['action'] ?? '';
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 

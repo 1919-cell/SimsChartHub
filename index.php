@@ -1,5 +1,9 @@
 <?php
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+include('db_connect.php');
+>>>>>>> Stashed changes
 =======
 include('db_connect.php');
 >>>>>>> Stashed changes
